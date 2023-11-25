@@ -5,7 +5,7 @@ from rest_framework import generics
 from .models import Source
 from .serializers import SourceSerializer
 
-class SourceListView(generics.ListAPIView):
+class SourceListView(generics.ListCreateAPIView):
     queryset = Source.objects.all()
     serializer_class = SourceSerializer
 
